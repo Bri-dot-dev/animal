@@ -52,24 +52,7 @@
 
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
     
 
 
@@ -135,52 +118,28 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal">
-        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalGroup -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalGroup">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#has-member"/>
-                <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
+    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
+    
+
+
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Ant -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Ant">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Carnivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -199,39 +158,7 @@
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Antelope -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Antelope">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Berry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Leaf"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Stem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -243,14 +170,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tiger"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Banana -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Banana">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit"/>
     </owl:Class>
     
 
@@ -294,66 +213,10 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Beet -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Beet">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Root"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Berry -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Berry">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit"/>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Boar -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Boar">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Grass"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Root"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -369,44 +232,10 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Branch -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Branch">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-part-of"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tree"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#BumbleBee -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#BumbleBee">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -417,9 +246,6 @@
                 <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Prey"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#EdiblePlant"/>
-        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Leaf"/>
-        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Stem"/>
     </owl:Class>
     
 
@@ -432,31 +258,23 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
+                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
                         <owl:allValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
+                                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
                             </owl:Restriction>
                         </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
         <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
         <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Carrot -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Carrot">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Root"/>
     </owl:Class>
     
 
@@ -478,45 +296,7 @@
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Deer -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Deer">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Berry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Grass"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tree"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -562,70 +342,10 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#EdiblePlant -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#EdiblePlant">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eaten-by"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eaten-by"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Elephant -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Elephant">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Leaf"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Stem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tree"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -657,21 +377,7 @@
 
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#FoodChainRole -->
 
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#FoodChainRole">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#inheres-in"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#FoodChainRole"/>
     
 
 
@@ -686,39 +392,7 @@
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Giraffe -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Giraffe">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Grass"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Leaf"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Stem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -735,84 +409,16 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Grass -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Grass">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eaten-by"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eaten-by"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#GrownFruit">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts"/>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Habitat -->
 
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Habitat">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#inhabits"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Habitat"/>
     
 
 
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
         <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
     </owl:Class>
     
@@ -838,14 +444,6 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Leaf -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Leaf">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts"/>
     </owl:Class>
     
 
@@ -891,38 +489,7 @@
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                                    </owl:Restriction>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Animal"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#AnimalType"/>
     </owl:Class>
     
 
@@ -941,62 +508,9 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Palmtree -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Palmtree">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#has-part"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Branch"/>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tree"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#is-proper-part-of"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PrairieDog -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PrairieDog">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1033,22 +547,6 @@
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#RainForest">
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Habitat"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Root -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Root">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Stem -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Stem">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#PlantParts"/>
     </owl:Class>
     
 
@@ -1117,28 +615,6 @@
     
 
 
-    <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tree -->
-
-    <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tree">
-        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eaten-by"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eaten-by"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tundra -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Tundra">
@@ -1150,28 +626,6 @@
     <!-- https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Vulture -->
 
     <owl:Class rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Vulture">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Carnivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Herbivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#eats"/>
-                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Plant"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Omnivore"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1216,33 +670,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Banana"/>
-            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Berry"/>
-            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#BumbleBee"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Beet"/>
-            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#BumbleBee"/>
-            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#Carrot"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 
