@@ -1,0 +1,1819 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="xml:base#"
+     xml:base="xml:base"
+     xmlns:p1="#"
+     xmlns:Ani="https://github.com/Bri-dot-dev/Animal-Ontology/animal.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:AnimalOntology="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#">
+    <owl:Ontology rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by">
+        <owl:inverseOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasAnimalGroup -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasAnimalGroup">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasCharacteristics"/>
+        <owl:inverseOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isAnimalGroupOf"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasCharacteristics">
+        <owl:inverseOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isCharachteristicsOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasCharacteristics"/>
+        <owl:inverseOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasHabitat -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasHabitat">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasCharacteristics"/>
+        <owl:inverseOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isHabitatOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isAnimalGroupOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isAnimalGroupOf">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isCharachteristicsOf"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isCharachteristicsOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isCharachteristicsOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isCharachteristicsOf"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isHabitatOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isHabitatOf">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isCharachteristicsOf"/>
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+        <rdfs:range rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalDiet -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalDiet">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>What said animal eats (Herbavore, Omnivore, Carnivore)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalHabitat -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalHabitat">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Area inwhich animal is located</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainProperty">
+        <rdfs:domain rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Showing if animal is Predator or Prey</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal">
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasAnimalGroup"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdfs:comment>Carnivore
+A carnivore, meaning &quot;meat eater&quot;, is an animal whose food and energy requirements derive solely from animal tissue or meat, whether through hunting or scavenging.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Colony -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Colony">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a colony is composed of two or more conspecific individuals living in close association with, or connected to, one another. This association is usually for mutual benefit such as stronger defense or the ability to attack bigger prey.[1] It is a cluster of identical cells (clones) on the surface of (or within) a solid medium, usually derived from a single parent cell, as in bacterial colony.[2] In contrast, solitary organisms are ones in which all individuals live independently and have all of the functions needed to survive and reproduce.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>the habitat or retreat of a lion or similar wild animal; lair</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+        <rdfs:comment>A desert is a barren area of landscape where little precipitation occurs and, consequently, living conditions are hostile for plant and animal life. The lack of vegetation exposes the unprotected surface of the ground to the processes of denudation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Flock -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Flock">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a number of birds of one kind feeding, resting, or traveling together.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:comment>Predator or Prey</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+        <rdfs:comment>A forest is an area of land dominated by trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing and ecological function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+        <rdfs:comment>Fruit plans or trees produce for animals to eat</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+        <rdfs:comment>low lying food inwhich animals feed on</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isHabitatOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:comment>A place where the animal inhabits</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:allValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdfs:comment>Herbivore
+A herbivore is an animal anatomically and physiologically adapted to eating plant material, for example foliage or marine algae, for the main component of its diet. As a result of their plant diet, herbivorous animals typically have mouthparts adapted to rasping</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a large group of animals, especially hoofed mammals, that live, feed, or migrate together or are kept together as livestock.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+        <rdfs:comment>Directly related to plants- source of food for animals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+        <rdfs:comment>Omnivore
+An omnivore is an animal that has the ability to eat and survive on both plant and animal matter. Obtaining energy and nutrients from plant and animal matter, omnivores digest carbohydrates, protein, fat, and fiber, and metabolize the nutrients and energy of the sources absorbed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pack -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pack">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a group of wild animals, especially wolves, living and hunting together.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Parts plants are made up of - directly related to plants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+        <rdfs:comment>an animal that naturally preys on others.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#FoodChainRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#hasFoodChainRole"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+                            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>an animal that is hunted and killed by another for food.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+        <rdfs:comment>Rainforests are forests characterized by high and continuous rainfall, with annual rainfall in the case of tropical rainforests between 2.5 and 4.5 metres and definitions varying by region for temperate rainforests.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Swarm -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Swarm">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#has-member"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a large or dense group of insects, especially flying ones.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Habitat"/>
+        <rdfs:comment>In physical geography, tundra is a type of biome where the tree growth is hindered by low temperatures and short growing seasons. The term tundra comes through Russian тундра from the Kildin Sámi word тӯндар meaning &quot;uplands&quot;, &quot;treeless mountain tract&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eaten-by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf -->
+
+    <owl:Class rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf">
+        <rdfs:subClassOf rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#inhabits"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#eats"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#isFoodChainRoleOf"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AfricanForestElephant -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AfricanForestElephant">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AndeanCondor -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AndeanCondor">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Colony"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Apple -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Apple">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#ArcticWolf -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#ArcticWolf">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bamboo -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bamboo">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Banana -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Banana">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Berry -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Berry">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BlackBear -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BlackBear">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BlackGardenAnt -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BlackGardenAnt">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BlackTailedPrairieDog -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BlackTailedPrairieDog">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BuffTailedBumbeBee -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BuffTailedBumbeBee">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BulletAnt -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BulletAnt">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Swarm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BushLeaf -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BushLeaf">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#CerealGrasses -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#CerealGrasses">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Grass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#DingoWolf -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#DingoWolf">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herbivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#GoldenNorthernBumbleBee -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#GoldenNorthernBumbleBee">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#BumbleBee"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Hawk -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Hawk">
+        <AnimalOntology:hasHabitat rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Trees"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#JavanPig -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#JavanPig">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pack"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#MalayanTiger -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#MalayanTiger">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#NorthernGiraffe -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#NorthernGiraffe">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#OrbiAntelope -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#OrbiAntelope">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PandaBear -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PandaBear">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PolarBear -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PolarBear">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SavannaEleplant -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SavannaEleplant">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Elephant"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SiberianTiger -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SiberianTiger">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SikaDeer -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SikaDeer">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pack"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#TreeLeaf -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#TreeLeaf">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Leaf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Trees -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Trees"/>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#TurkeyVulture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#TurkeyVulture">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Vulture">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Flock"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Omnivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Prey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#WestAfricanLion -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#WestAfricanLion">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#WhiteTailedDeer -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#WhiteTailedDeer">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Deer"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#WildBoar -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#WildBoar">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Wolf">
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Carnivore"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pack"/>
+        <rdf:type rdf:resource="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Predator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#AnimalGroup">
+        <rdfs:comment>Denoting how the animals group in the wild</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Ant"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#PrairieDog"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Antelope"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Bear"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pig"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Colony"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Den"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Flock"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Herd"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Pack"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Swarm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Desert"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Forest"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#RainForest"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#SubSaharan"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tundra"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Giraffe"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Lion"/>
+            <rdf:Description rdf:about="https://github.com/Bri-dot-dev/animal/blob/main/AnimalOntology.owl#Tiger"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
